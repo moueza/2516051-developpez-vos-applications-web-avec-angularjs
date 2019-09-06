@@ -22,3 +22,13 @@ myApp.controller("exemple1Ctrl", function ($scope) {
         return ($scope.age >= 18) ? "majeur" : "mineur";
     };
 });
+
+
+
+
+
+
+//var app = angular.module("firstAppApp", []);
+myApp.controller("myController", function ($scope) {
+    $scope.showContent = true;
+});

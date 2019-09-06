@@ -66,12 +66,26 @@
             </div>
         </div>
 
-
+<!--
         <div  >
             <div ng-controller="SomeController">
                 <expander class="expander" expander-title="title">
                     {{text}}
                 </expander>
+            </div>
+        </div>-->
+
+
+
+
+
+        <div  >
+            <div ng-controller="SomeController">
+                <accordion>
+                    <expander class="expander" expander-title="expander.title" ng-repeat="expander in expanders">
+                        {{expander.text}}
+                    </expander>
+                </accordion>
             </div>
         </div>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

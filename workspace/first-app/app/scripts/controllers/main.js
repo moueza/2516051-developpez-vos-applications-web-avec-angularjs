@@ -63,14 +63,14 @@ myApp.controller("BillCtrl", function ($scope) {
 });
 
 
-var app = angular.module("app", []);
+//var app = angular.module("app", []);
 
-app.controller("SomeController", function ($scope) {
+myApp.controller("SomeController", function ($scope) {
     $scope.title = "Titre";
     $scope.text = "Contenu";
 });
 
-app.directive("expander", function () {
+myApp.directive("expander", function () {
     return {
         restrict: 'EA',
         replace: true,

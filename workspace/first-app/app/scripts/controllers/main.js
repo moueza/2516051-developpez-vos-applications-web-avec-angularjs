@@ -32,3 +32,8 @@ myApp.controller("exemple1Ctrl", function ($scope) {
 myApp.controller("myController", function ($scope) {
     $scope.showContent = true;
 });
+
+
+myApp.controller("exempleCtrl", function ($scope) {
+    $scope.name = "World"
+});

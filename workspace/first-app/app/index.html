@@ -21,94 +21,22 @@
 
         <!-- Add your site or application content here -->
 
-
-
-
-        <div >
-            <div ng-controller="exemple1Ctrl">
-                <input ng-model="age"/>
-                <span>Vous êtes <b ng-bind="majeurOrMineurText()"></b></span>
-            </div> 
-        </div>
-
-
-
-        <div >
+        <div  >
             <div ng-controller="myController">
-                <label>Afficher le paragraphe</label>
-                <input type="checkbox" ng-model="showContent"/>
-                <p ng-show="showContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <span>{{'2012-04-01'| date: 'dd MMM yyyy'}}</span>
+            </div>    
+
+            <div>
+                Cet article vaut  <span>
+                    {{15.5879|currency:'€':2}}</span>         
             </div>
-        </div>
-        <div  >
-            <div ng-controller="exempleCtrl">
-                HELLO {{name}}!
-            </div>
-        </div>
-        <div ng-app="app">
-            <div ng-controller="BillCtrl">
-                <ul>
-                    <li ng-repeat="article in articles">
-                        <label>{{article.name}}:</label>
-                        <input ng-model="article.price"/>
-                        <input type="number" ng-model="article.quantity"/>                
-                    </li>
-                </ul>
-                <div>
-                    <label>Total facture: </label><span>{{total() | currency:"€":2}}</span>            
-                </div>
-                <div>
-                    <label>Réduction: </label><span>{{discount| currency: "€":2}}</span>
-                </div>
-                <div>
-                    <label>Somme à payer: </label><span>{{finalTotal() | currency: "€":2}}</span>        
-                </div>
+            <div>
+                <span>
+                    {{'todo'|uppercase}}
+                </span>         
             </div>
         </div>
 
-        <!--
-                <div  >
-                    <div ng-controller="SomeController">
-                        <expander class="expander" expander-title="title">
-                            {{text}}
-                        </expander>
-                    </div>
-                </div>-->
-
-
-
-
-
-        <div  >
-            <div ng-controller="SomeController">
-                <accordion>
-                    <expander class="expander" expander-title="expander.title" ng-repeat="expander in expanders">
-                        {{expander.text}}
-                    </expander>
-                </accordion>
-            </div>
-        </div>
-
-
-
-
-
-        <div  >
-            <div ng-controller="factoryCtrl">
-                factory : {{fact}}
-            </div>
-        </div>
-        <div  >
-            <div ng-controller="serviceCtrl">
-                factory : {{serv}}
-            </div>
-        </div>
-
-        <div  >
-            <div ng-controller="providerCtrl">
-                provider : {{providerr}}
-            </div>
-        </div>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
         <script>

@@ -160,3 +160,21 @@ myApp.factory("factoryExample", function () {
 myApp.controller("factoryCtrl", function ($scope, factoryExample) {
     $scope.fact = factoryExample.service1();
 });
+
+
+
+
+
+myApp.service("serviceExample", function () {
+    this.service1 = function () {
+        var stringg = "chnService";
+        return stringg;
+    };
+    this.service2 = function () {
+        null
+    };
+});
+
+myApp.controller("serviceCtrl", function ($scope, serviceExample) {
+    $scope.serv = serviceExample.service1();
+});

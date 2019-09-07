@@ -203,7 +203,7 @@ myApp.config(function (greeterProvider) {
     greeterProvider.setSalutation("Bonjour provider service");
 });
 
-//It need to be called in view to operate
+//It needs to be called in view to operate
 myApp.controller('providerCtrl', function ($scope, greeter) {
     console.log(greeter.greet());
     $scope.providerr = 'my provider';

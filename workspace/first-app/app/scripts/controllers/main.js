@@ -147,3 +147,16 @@ myApp.directive("expander", function () {
     };
 });
 
+myApp.factory("factoryExample", function () {
+    return{
+        service1: function () {
+            var stringg = "chn";
+            return stringg;
+        },
+        service2: function () {},
+    }
+});
+
+myApp.controller("factoryCtrl", function ($scope, factoryExample) {
+    $scope.fact = factoryExample.service1();
+});

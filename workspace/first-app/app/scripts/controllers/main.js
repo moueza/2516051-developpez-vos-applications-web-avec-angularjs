@@ -163,7 +163,7 @@ myApp.controller("factoryCtrl", function ($scope, factoryExample) {
 
 
 
-
+////////////////////
 
 myApp.service("serviceExample", function () {
     this.service1 = function () {
@@ -177,4 +177,34 @@ myApp.service("serviceExample", function () {
 
 myApp.controller("serviceCtrl", function ($scope, serviceExample) {
     $scope.serv = serviceExample.service1();
+});
+
+//////////////////////////////
+myApp.provider("greeter", function () {
+    var salutation = "Hello";
+    this.setSalutation = function (_salutation) {
+        salutation = _salutation;
+    };
+
+    function Greeter() {
+        this.greet = function () {
+            return salutation;
+        };
+    }
+    ;
+
+    this.$get = function () {
+        return new Greeter();
+    };
+});
+
+//var app = angular.module("app", []).config(function (greeterProvider) {
+myApp.config(function (greeterProvider) {
+    greeterProvider.setSalutation("Bonjour provider service");
+});
+
+//It need to be called in view to operate
+myApp.controller('providerCtrl', function ($scope, greeter) {
+    console.log(greeter.greet());
+    $scope.providerr = 'my provider';
 });
